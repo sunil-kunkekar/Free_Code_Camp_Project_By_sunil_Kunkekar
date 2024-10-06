@@ -1,3 +1,5 @@
+#Learn Lambda Functions by building an Expense Tracker
+
 def add_expense(expenses, amount, category):
     expenses.append({'amount': amount, 'category': category})
     
@@ -46,3 +48,4 @@ def main():
             print('Exiting the program.')
             break
 
+main()

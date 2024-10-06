@@ -1,11 +1,11 @@
 #Learn String manipulations  by building a cipher
 
-text = 'mrttaqrhknsw ih puggrur'
-custom_key = 'python'
+text       = 'mrttaqrhknsw ih puggrur'
+custom_key = 'happycoding'
 
 def vigenere(message, key, direction=1):
-    key_index = 0
-    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    key_index     = 0
+    alphabet      = 'abcdefghijklmnopqrstuvwxyz'
     final_message = ''
 
     for char in message.lower():
@@ -15,12 +15,12 @@ def vigenere(message, key, direction=1):
             final_message += char
         else:        
             # Find the right key character to encode/decode
-            key_char = key[key_index % len(key)]
+            key_char   = key[key_index % len(key)]
             key_index += 1
 
             # Define the offset and the encrypted/decrypted letter
-            offset = alphabet.index(key_char)
-            index = alphabet.find(char)
+            offset    = alphabet.index(key_char)
+            index     = alphabet.find(char)
             new_index = (index + offset*direction) % len(alphabet)
             final_message += alphabet[new_index]
     
